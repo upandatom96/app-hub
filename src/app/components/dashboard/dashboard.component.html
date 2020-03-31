@@ -4,6 +4,18 @@
 ></app-header>
 <app-body>
   <div class="row">
+    <ng-container *ngFor="let app of apps">
+      <div class="col-md-6 my-3">
+        <app-card [title]="app.name" [icon]="app.icon">
+          <p>
+            {{ app.description }}
+          </p>
+          <a class="btn btn-secondary" [href]="app.link" target="_blank">
+            Go
+          </a>
+        </app-card>
+      </div>
+    </ng-container>
     <div class="col-md-6 my-3">
       <app-card [title]="'More Information'" [icon]="'fa-info-circle'">
         <p>
