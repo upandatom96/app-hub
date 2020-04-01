@@ -4,6 +4,7 @@ import { InfoComponent } from "./info.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { HeaderComponent } from "../header/header.component";
 import { BodyComponent } from "../body/body.component";
+import { CardComponent } from '../card/card.component';
 
 describe("InfoComponent", () => {
   let component: InfoComponent;
@@ -13,7 +14,7 @@ describe("InfoComponent", () => {
     TestBed.configureTestingModule({
       declarations: [
         InfoComponent,
-        HeaderComponent, BodyComponent,
+        HeaderComponent, BodyComponent, CardComponent
       ],
       imports: [HttpClientTestingModule]
     })
