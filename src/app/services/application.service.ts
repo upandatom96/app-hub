@@ -25,7 +25,7 @@ export class ApplicationService {
       link: "http://www.adamintheparkinglot.com/",
       description: "Coming soon: website for my band.",
       icon: "fa-music",
-      archived: false,
+      archived: true,
     },
     {
       name: "Basic Angular App",
@@ -65,7 +65,7 @@ export class ApplicationService {
     {
       name: "Armor Equipment (Small Business Site)",
       link: "http://www.armor-equip.com/",
-      description: "A small business website I built right out of college.",
+      description: "A website for a small business that sells trash equipment that I built right out of college.",
       icon: "fa-trash",
       archived: false,
     },
