@@ -32,4 +32,8 @@ export class DashboardComponent {
     this.navHelper.goToInfo();
   }
 
+  public goToDonate() {
+    this.navHelper.goToDonate();
+  }
+
 }

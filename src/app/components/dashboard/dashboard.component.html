@@ -44,6 +44,16 @@
       <h2 class="text-center mt-3">More</h2>
     </div>
     <div class="col-md-6 my-3">
+      <app-card [title]="'Donate to Charity'" [icon]="'fa-money'">
+        <p>
+          Like any of these websites? Pay it forward to a charity I support.
+        </p>
+        <button class="btn btn-secondary" (click)="goToDonate()">
+          Donate
+        </button>
+      </app-card>
+    </div>
+    <div class="col-md-6 my-3">
       <app-card [title]="'App Information'" [icon]="'fa-info-circle'">
         <p>
           Just curious about this site? Get more information about this website.

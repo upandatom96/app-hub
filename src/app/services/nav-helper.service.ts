@@ -19,6 +19,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Info);
   }
 
+  public goToDonate(): void {
+    this.goToRoute(ROUTES_ENUM.Donate);
+  }
+
   public goToProfile(): void {
     this.goToRoute(ROUTES_ENUM.Profile);
   }
