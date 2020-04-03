@@ -4,7 +4,10 @@
 ></app-header>
 <app-body>
   <div class="row">
-    <ng-container *ngFor="let app of apps">
+    <div class="col-md-12">
+      <h2 class="text-center mt-3">Featured Apps</h2>
+    </div>
+    <ng-container *ngFor="let app of featuredApps">
       <div class="col-md-6 my-3">
         <app-card [title]="app.name" [icon]="app.icon">
           <p>
@@ -16,8 +19,32 @@
         </app-card>
       </div>
     </ng-container>
+  </div>
+  <div class="row" *ngIf="showArchive">
+    <div class="col-md-12">
+      <hr />
+      <h2 class="text-center mt-3">Archived Apps</h2>
+    </div>
+    <ng-container *ngFor="let app of archivedApps">
+      <div class="col-md-6 my-3">
+        <app-card [title]="app.name" [icon]="app.icon">
+          <p>
+            {{ app.description }}
+          </p>
+          <a class="btn btn-secondary" [href]="app.link" target="_blank">
+            Go
+          </a>
+        </app-card>
+      </div>
+    </ng-container>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <hr />
+      <h2 class="text-center mt-3">More</h2>
+    </div>
     <div class="col-md-6 my-3">
-      <app-card [title]="'More Information'" [icon]="'fa-info-circle'">
+      <app-card [title]="'App Information'" [icon]="'fa-info-circle'">
         <p>
           Just curious about this site? Get more information about this website.
         </p>

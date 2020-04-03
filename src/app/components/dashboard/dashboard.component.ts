@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { NavHelperService } from "src/app/services/nav-helper.service";
 import { Application } from "src/app/models/Application.model";
 import { ApplicationService } from "src/app/services/application.service";
+import { CookieHelper } from 'src/app/utilities/cookie.util';
 
 @Component({
   selector: "app-dashboard",
@@ -10,8 +11,16 @@ import { ApplicationService } from "src/app/services/application.service";
 })
 export class DashboardComponent {
 
-  public get apps(): Application[] {
-    return this.appService.currentApps;
+  public get featuredApps(): Application[] {
+    return this.appService.featuredApps;
+  }
+
+  public get archivedApps(): Application[] {
+    return this.appService.archivedApps;
+  }
+
+  public get showArchive(): boolean {
+    return CookieHelper.admin;
   }
 
   constructor(
