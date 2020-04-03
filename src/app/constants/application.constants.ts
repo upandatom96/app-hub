@@ -1,4 +1,4 @@
-import { Application } from '../models/Application.model';
+import { Application } from "../models/Application.model";
 
 export const APPLICATIONS: Application[] = [
   {

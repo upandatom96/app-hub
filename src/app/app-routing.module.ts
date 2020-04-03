@@ -6,7 +6,7 @@ import { ROUTES_ENUM } from "./constants/routing.constants";
 import { LoginComponent } from "./components/login/login.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { AdminComponent } from "./components/admin/admin.component";
-import { DonateComponent } from './components/donate/donate.component';
+import { DonateComponent } from "./components/donate/donate.component";
 
 const routes: Routes = [
   // main

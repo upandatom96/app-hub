@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { DonateComponent } from './donate.component';
+import { DonateComponent } from "./donate.component";
+import { HeaderComponent } from "../header/header.component";
+import { BodyComponent } from "../body/body.component";
+import { CardComponent } from "../card/card.component";
 
-describe('DonateComponent', () => {
+describe("DonateComponent", () => {
   let component: DonateComponent;
   let fixture: ComponentFixture<DonateComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DonateComponent ]
+      declarations: [DonateComponent, HeaderComponent, BodyComponent, CardComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,7 @@ describe('DonateComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
