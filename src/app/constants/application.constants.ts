@@ -71,4 +71,11 @@ export const APPLICATIONS: Application[] = [
     icon: "fa-star",
     archived: true,
   },
+  {
+    name: "Basic Express App",
+    link: "https://aoti-basic-express-app.herokuapp.com/",
+    description: "A basic Express App I use for a backend. Connects to a cloud MongoDB database.",
+    icon: "fa-laptop",
+    archived: true,
+  },
 ];
