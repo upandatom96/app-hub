@@ -78,4 +78,11 @@ export const APPLICATIONS: Application[] = [
     icon: "fa-laptop",
     archived: true,
   },
+  {
+    name: "Zoom Backgrounds",
+    link: "https://zoom-backgrounds.herokuapp.com/",
+    description: "A very simple HTML website that showcases some Zoom Backgrounds.",
+    icon: "fa-picture-o",
+    archived: false,
+  },
 ];
