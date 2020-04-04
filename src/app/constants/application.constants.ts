@@ -9,6 +9,20 @@ export const APPLICATIONS: Application[] = [
     archived: false,
   },
   {
+    name: "Zoom Backgrounds",
+    link: "https://zoom-backgrounds.herokuapp.com/",
+    description: "A showcase for some Zoom Backgrounds.",
+    icon: "fa-picture-o",
+    archived: false,
+  },
+  {
+    name: "XPath Assitant",
+    link: "https://xpath-assistant.herokuapp.com/",
+    description: "A simple app to help building XPath statements.",
+    icon: "fa-map-signs",
+    archived: false,
+  },
+  {
     name: "User Management",
     link: "https://aoti-user-management-ui.herokuapp.com/",
     description: "User Management for most of my applications.",
@@ -44,13 +58,6 @@ export const APPLICATIONS: Application[] = [
     archived: true,
   },
   {
-    name: "XPath Assitant",
-    link: "https://xpath-assistant.herokuapp.com/",
-    description: "A simple app to help building XPath statements.",
-    icon: "fa-map-signs",
-    archived: false,
-  },
-  {
     name: "Overton Portfolio (Sample Site)",
     link: "https://overton-portfolio-ui.herokuapp.com/",
     description: "A site I started building for a friend's portfolio.",
@@ -77,12 +84,5 @@ export const APPLICATIONS: Application[] = [
     description: "A basic Express App I use for a backend. Connects to a cloud MongoDB database.",
     icon: "fa-laptop",
     archived: true,
-  },
-  {
-    name: "Zoom Backgrounds",
-    link: "https://zoom-backgrounds.herokuapp.com/",
-    description: "A showcase for some Zoom Backgrounds.",
-    icon: "fa-picture-o",
-    archived: false,
   },
 ];
