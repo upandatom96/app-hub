@@ -81,7 +81,7 @@ export const APPLICATIONS: Application[] = [
   {
     name: "Zoom Backgrounds",
     link: "https://zoom-backgrounds.herokuapp.com/",
-    description: "A very simple HTML website that showcases some Zoom Backgrounds.",
+    description: "A showcase for some Zoom Backgrounds.",
     icon: "fa-picture-o",
     archived: false,
   },
