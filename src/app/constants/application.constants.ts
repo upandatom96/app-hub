@@ -85,4 +85,11 @@ export const APPLICATIONS: Application[] = [
     icon: "fa-laptop",
     archived: true,
   },
+  {
+    name: "Adam on the Internet (new)",
+    link: "https://adam-on-the-internet.herokuapp.com/",
+    description: "My professional home page.",
+    icon: "fa-home",
+    archived: true,
+  },
 ];
