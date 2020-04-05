@@ -92,4 +92,11 @@ export const APPLICATIONS: Application[] = [
     icon: "fa-home",
     archived: true,
   },
+  {
+    name: "Story Dice",
+    link: "https://story-dice.herokuapp.com/",
+    description: "An app I made early on that simulates dice rolls with random images.",
+    icon: "fa-question-circle",
+    archived: false,
+  },
 ];
