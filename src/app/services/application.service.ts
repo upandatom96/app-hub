@@ -1,11 +1,11 @@
 import { Injectable } from "@angular/core";
 import { Application } from "../models/Application.model";
 import { APPLICATIONS } from "../constants/application.constants";
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { RestUrlBuilder } from '../utilities/rest-url-builder.util';
-import { ServiceUrl } from '../constants/rest.constants';
-import { CookieHelper } from '../utilities/cookie.util';
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs";
+import { RestUrlBuilder } from "../utilities/rest-url-builder.util";
+import { ServiceUrl } from "../constants/rest.constants";
+import { CookieHelper } from "../utilities/cookie.util";
 
 const controller = "application";
 

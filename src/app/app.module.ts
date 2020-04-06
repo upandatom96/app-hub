@@ -18,10 +18,10 @@ import { BodyComponent } from "./components/body/body.component";
 import { LoadingComponent } from "./components/loading/loading.component";
 import { CardComponent } from "./components/card/card.component";
 import { DonateComponent } from "./components/donate/donate.component";
-import { ApplicationDisplayComponent } from './components/application-display/application-display.component';
-import { ApplicationFormComponent } from './components/application-form/application-form.component';
-import { ApplicationOverviewComponent } from './components/application-overview/application-overview.component';
-import { ApplicationTableComponent } from './components/application-table/application-table.component';
+import { ApplicationDisplayComponent } from "./components/application-display/application-display.component";
+import { ApplicationFormComponent } from "./components/application-form/application-form.component";
+import { ApplicationOverviewComponent } from "./components/application-overview/application-overview.component";
+import { ApplicationTableComponent } from "./components/application-table/application-table.component";
 
 @NgModule({
   declarations: [

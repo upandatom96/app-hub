@@ -1,15 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ApplicationFormComponent } from './application-form.component';
-import { CardComponent } from '../card/card.component';
+import { ApplicationFormComponent } from "./application-form.component";
+import { CardComponent } from "../card/card.component";
+import { HeaderComponent } from "../header/header.component";
+import { BodyComponent } from "../body/body.component";
+import { FormsModule } from "@angular/forms";
+import { LoadingComponent } from "../loading/loading.component";
+import { RouterTestingModule } from "@angular/router/testing";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
 
-describe('ApplicationFormComponent', () => {
+describe("ApplicationFormComponent", () => {
   let component: ApplicationFormComponent;
   let fixture: ComponentFixture<ApplicationFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ApplicationFormComponent, CardComponent]
+      declarations: [
+        ApplicationFormComponent, CardComponent,
+        HeaderComponent, BodyComponent, LoadingComponent
+      ],
+      imports: [FormsModule, RouterTestingModule, HttpClientTestingModule]
     })
       .compileComponents();
   }));
@@ -20,7 +30,7 @@ describe('ApplicationFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

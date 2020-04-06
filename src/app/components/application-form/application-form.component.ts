@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Application } from 'src/app/models/Application.model';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
-import { ActivatedRoute } from '@angular/router';
-import { ApplicationService } from 'src/app/services/application.service';
-import { NavHelperService } from 'src/app/services/nav-helper.service';
+import { Component, OnInit } from "@angular/core";
+import { Application } from "src/app/models/Application.model";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { ActivatedRoute } from "@angular/router";
+import { ApplicationService } from "src/app/services/application.service";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
-  selector: 'app-application-form',
-  templateUrl: './application-form.component.html',
-  styleUrls: ['./application-form.component.scss']
+  selector: "app-application-form",
+  templateUrl: "./application-form.component.html",
+  styleUrls: ["./application-form.component.scss"]
 })
 export class ApplicationFormComponent implements OnInit {
   public application: Application = null;

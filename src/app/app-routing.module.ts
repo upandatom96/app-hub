@@ -7,9 +7,9 @@ import { LoginComponent } from "./components/login/login.component";
 import { ProfileComponent } from "./components/profile/profile.component";
 import { AdminComponent } from "./components/admin/admin.component";
 import { DonateComponent } from "./components/donate/donate.component";
-import { ApplicationOverviewComponent } from './components/application-overview/application-overview.component';
-import { ApplicationDisplayComponent } from './components/application-display/application-display.component';
-import { ApplicationFormComponent } from './components/application-form/application-form.component';
+import { ApplicationOverviewComponent } from "./components/application-overview/application-overview.component";
+import { ApplicationDisplayComponent } from "./components/application-display/application-display.component";
+import { ApplicationFormComponent } from "./components/application-form/application-form.component";
 
 const routes: Routes = [
   // main

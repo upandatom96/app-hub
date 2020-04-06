@@ -1,16 +1,26 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ApplicationOverviewComponent } from './application-overview.component';
+import { ApplicationOverviewComponent } from "./application-overview.component";
+import { HeaderComponent } from "../header/header.component";
+import { BodyComponent } from "../body/body.component";
+import { ApplicationTableComponent } from "../application-table/application-table.component";
+import { LoadingComponent } from "../loading/loading.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-describe('ApplicationOverviewComponent', () => {
+describe("ApplicationOverviewComponent", () => {
   let component: ApplicationOverviewComponent;
   let fixture: ComponentFixture<ApplicationOverviewComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApplicationOverviewComponent ]
+      declarations: [
+        ApplicationOverviewComponent, HeaderComponent, BodyComponent,
+        ApplicationTableComponent, LoadingComponent
+      ],
+      imports: [HttpClientTestingModule, RouterTestingModule],
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +29,7 @@ describe('ApplicationOverviewComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

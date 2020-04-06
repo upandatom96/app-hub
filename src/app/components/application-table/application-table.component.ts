@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { Application } from 'src/app/models/Application.model';
-import { CookieHelper } from 'src/app/utilities/cookie.util';
-import { ApplicationService } from 'src/app/services/application.service';
-import { NavHelperService } from 'src/app/services/nav-helper.service';
+import { Component, OnInit } from "@angular/core";
+import { Application } from "src/app/models/Application.model";
+import { CookieHelper } from "src/app/utilities/cookie.util";
+import { ApplicationService } from "src/app/services/application.service";
+import { NavHelperService } from "src/app/services/nav-helper.service";
 
 @Component({
-  selector: 'app-application-table',
-  templateUrl: './application-table.component.html',
-  styleUrls: ['./application-table.component.scss']
+  selector: "app-application-table",
+  templateUrl: "./application-table.component.html",
+  styleUrls: ["./application-table.component.scss"]
 })
 export class ApplicationTableComponent implements OnInit {
   public applications: Application[] = null;

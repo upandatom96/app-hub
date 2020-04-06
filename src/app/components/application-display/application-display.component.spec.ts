@@ -1,16 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ApplicationDisplayComponent } from './application-display.component';
+import { ApplicationDisplayComponent } from "./application-display.component";
+import { BodyComponent } from "../body/body.component";
+import { HeaderComponent } from "../header/header.component";
+import { LoadingComponent } from "../loading/loading.component";
+import { HttpClientTestingModule } from "@angular/common/http/testing";
+import { RouterTestingModule } from "@angular/router/testing";
 
-describe('ApplicationDisplayComponent', () => {
+describe("ApplicationDisplayComponent", () => {
   let component: ApplicationDisplayComponent;
   let fixture: ComponentFixture<ApplicationDisplayComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApplicationDisplayComponent ]
+      declarations: [
+        ApplicationDisplayComponent, BodyComponent, HeaderComponent,
+        LoadingComponent
+      ],
+      imports: [HttpClientTestingModule, RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +28,7 @@ describe('ApplicationDisplayComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

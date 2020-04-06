@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { ApplicationService } from 'src/app/services/application.service';
-import { ActivatedRoute } from '@angular/router';
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
-import { Application } from 'src/app/models/Application.model';
+import { Component, OnInit } from "@angular/core";
+import { ApplicationService } from "src/app/services/application.service";
+import { ActivatedRoute } from "@angular/router";
+import { BooleanHelper } from "src/app/utilities/boolean.util";
+import { Application } from "src/app/models/Application.model";
 
 @Component({
-  selector: 'app-application-display',
-  templateUrl: './application-display.component.html',
-  styleUrls: ['./application-display.component.scss']
+  selector: "app-application-display",
+  templateUrl: "./application-display.component.html",
+  styleUrls: ["./application-display.component.scss"]
 })
 export class ApplicationDisplayComponent implements OnInit {
   public application: Application = null;
