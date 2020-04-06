@@ -3,7 +3,7 @@ import { NavHelperService } from "src/app/services/nav-helper.service";
 import { Application } from "src/app/models/Application.model";
 import { ApplicationService } from "src/app/services/application.service";
 import { CookieHelper } from "src/app/utilities/cookie.util";
-import { BooleanHelper } from 'src/app/utilities/boolean.util';
+import { BooleanHelper } from "src/app/utilities/boolean.util";
 
 @Component({
   selector: "app-dashboard",
