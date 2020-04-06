@@ -35,6 +35,24 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Login);
   }
 
+  // APPLICATION MANAGEMENT
+
+  public goToApplicationOverview(): void {
+    this.goToRoute(ROUTES_ENUM.ApplicationOverview);
+  }
+
+  public goToApplicationDetails(appId: string): void {
+    this.goToRoutes([ROUTES_ENUM.ApplicationDetails, appId]);
+  }
+
+  public goToApplicationCreateForm(): void {
+    this.goToRoute(ROUTES_ENUM.ApplicationForm);
+  }
+
+  public goToApplicationEditForm(appId: string): void {
+    this.goToRoutes([ROUTES_ENUM.ApplicationForm, appId]);
+  }
+
   // GENERAL
 
   private goToRoute(route: string): void {

@@ -5,4 +5,7 @@ export const enum ROUTES_ENUM {
   Profile = "profile",
   Admin = "admin",
   Login = "login",
+  ApplicationOverview = "app-overview",
+  ApplicationDetails = "app-details",
+  ApplicationForm = "app-form",
 }

@@ -1,1 +1,21 @@
-<p>application-display works!</p>
+<ng-container *ngIf="ready; else notReady">
+  <app-body>
+    <div class="row">
+      <div class="col-md-12 my-3">
+        <h1>
+          {{ application.name }}
+        </h1>
+        <p>
+          {{ application.description }}
+        </p>
+        <p>
+          <small>{{ application._id }}</small>
+        </p>
+      </div>
+    </div>
+  </app-body>
+</ng-container>
+
+<ng-template #notReady>
+  <app-loading></app-loading>
+</ng-template>
