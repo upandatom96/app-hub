@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Application } from "../models/Application.model";
-import { APPLICATIONS } from "../constants/application.constants";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 import { RestUrlBuilder } from "../utilities/rest-url-builder.util";
@@ -13,28 +12,6 @@ const controller = "application";
   providedIn: "root"
 })
 export class ApplicationService {
-  public get allApps(): Application[] {
-    return APPLICATIONS;
-  }
-
-  public get featuredApps(): Application[] {
-    return this.allApps.filter((app) => {
-      return app.status === 2;
-    });
-  }
-
-  public get otherApplications(): Application[] {
-    return this.allApps.filter((app) => {
-      return app.status === 1;
-    });
-  }
-
-  public get archivedApps(): Application[] {
-    return this.allApps.filter((app) => {
-      return app.status === 0;
-    });
-  }
-
   constructor(
     private http: HttpClient,
   ) { }
