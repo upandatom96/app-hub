@@ -1,1 +1,59 @@
-<p>application-table works!</p>
+<div class="row">
+  <div class="col-md-12 my-3">
+    <ng-container *ngIf="ready; else notReady">
+      <button class="btn btn-secondary" (click)="createApplication()" *ngIf="canEdit">
+        Create Application
+      </button>
+      <ng-container *ngIf="!hasApp">
+        <p>No applications available.</p>
+      </ng-container>
+      <ng-container *ngIf="hasApp">
+        <p>
+          <small>Showing {{ applications.length }} application(s)</small>
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Details</th>
+              <ng-container *ngIf="canEdit">
+                <th>Edit</th>
+                <th>Delete</th>
+              </ng-container>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let app of applications">
+              <td>{{ app.name }}</td>
+              <td>
+                <button class="btn btn-secondary" (click)="appDetails(app)">
+                  Details
+                </button>
+              </td>
+              <ng-container *ngIf="canEdit">
+                <td>
+                  <button class="btn btn-secondary" (click)="editApp(app)">
+                    Edit
+                  </button>
+                </td>
+                <td>
+                  <button
+                    class="btn btn-secondary"
+                    (click)="requestDelete(app)"
+                  >
+                    Delete
+                  </button>
+                </td>
+              </ng-container>
+            </tr>
+          </tbody>
+        </table>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>
+
+<ng-template #notReady>
+  <p *ngIf="error">Error occured :(</p>
+  <app-loading *ngIf="!error"></app-loading>
+</ng-template>

@@ -39,7 +39,7 @@ export class ApplicationService {
     private http: HttpClient,
   ) { }
 
-  public getApplication(): Observable<Application[]> {
+  public getApplications(): Observable<Application[]> {
     const url = RestUrlBuilder.buildRestUrl({
       service: ServiceUrl.BasicExpress,
       controller
