@@ -3,5 +3,5 @@ export interface Application {
   link: string;
   description: string;
   icon: string;
-  archived: boolean;
+  status: number;
 }
