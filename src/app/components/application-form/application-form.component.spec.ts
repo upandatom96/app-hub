@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ApplicationFormComponent } from './application-form.component';
+import { CardComponent } from '../card/card.component';
 
 describe('ApplicationFormComponent', () => {
   let component: ApplicationFormComponent;
@@ -8,9 +9,9 @@ describe('ApplicationFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApplicationFormComponent ]
+      declarations: [ApplicationFormComponent, CardComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

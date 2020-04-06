@@ -19,19 +19,19 @@ export class ApplicationService {
 
   public get featuredApps(): Application[] {
     return this.allApps.filter((app) => {
-      return app.status === 1;
+      return app.status === 2;
     });
   }
 
   public get otherApplications(): Application[] {
     return this.allApps.filter((app) => {
-      return app.status === 2;
+      return app.status === 1;
     });
   }
 
   public get archivedApps(): Application[] {
     return this.allApps.filter((app) => {
-      return app.status === 3;
+      return app.status === 0;
     });
   }
 

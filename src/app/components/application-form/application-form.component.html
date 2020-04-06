@@ -3,66 +3,71 @@
   <app-body>
     <div class="row">
       <div class="col-md-12 my-3">
-        <form>
-          <section id="app-name">
-            1. App name:
-            <br />
-            <input
-              type="text"
-              name="appName"
-              [(ngModel)]="application.name"
-            /><br /><br />
-          </section>
-          <section id="app-description">
-            2. App description:
-            <br />
-            <textarea
-              rows="20"
-              cols="50"
-              (change)="updateDescription($event)"
-              >{{ application.description }}</textarea
-            ><br /><br />
-          </section>
-          <section id="app-link">
-            3. App link:
-            <br />
-            <input
-              type="text"
-              name="appLink"
-              [(ngModel)]="application.link"
-            /><br /><br />
-          </section>
-          <section id="app-icon">
-            4. App icon:
-            <br />
-            <input
-              type="text"
-              name="appIcon"
-              [(ngModel)]="application.icon"
-            /><br /><br />
-          </section>
-          <section id="app-status">
-            5. App status:
-            <br />
-            <input
-              type="number"
-              name="appStatus"
-              [(ngModel)]="application.status"
-            /><br /><br />
-          </section>
-          <hr />
-          <div class="error-report" *ngIf="showErrors && !valid">
-            <p>Please correct the following errors:</p>
-            <ul>
-              <li *ngFor="let error of errors">
-                {{ error }}
-              </li>
-            </ul>
-          </div>
-          <button class="btn btn-primary" (click)="submit()">
-            Save Application
-          </button>
-        </form>
+        <app-card>
+          <form>
+            <section id="app-name">
+              1. App name:
+              <br />
+              <input
+                type="text"
+                name="appName"
+                [(ngModel)]="application.name"
+              /><br /><br />
+            </section>
+            <section id="app-description">
+              2. App description:
+              <br />
+              <textarea
+                rows="20"
+                cols="50"
+                (change)="updateDescription($event)"
+                >{{ application.description }}</textarea
+              ><br /><br />
+            </section>
+            <section id="app-link">
+              3. App link:
+              <br />
+              <input
+                type="text"
+                name="appLink"
+                [(ngModel)]="application.link"
+              /><br /><br />
+            </section>
+            <section id="app-icon">
+              4. App icon:
+              <br />
+              <input
+                type="text"
+                name="appIcon"
+                [(ngModel)]="application.icon"
+              /><br /><br />
+            </section>
+            <section id="app-status">
+              5. App status:
+              <br />
+              <p>0 is archived</p>
+              <p>1 is available</p>
+              <p>2 is featured</p>
+              <input
+                type="number"
+                name="appStatus"
+                [(ngModel)]="application.status"
+              /><br /><br />
+            </section>
+            <hr />
+            <div class="error-report" *ngIf="showErrors && !valid">
+              <p>Please correct the following errors:</p>
+              <ul>
+                <li *ngFor="let error of errors">
+                  {{ error }}
+                </li>
+              </ul>
+            </div>
+            <button class="btn btn-primary" (click)="submit()">
+              Save Application
+            </button>
+          </form>
+        </app-card>
       </div>
     </div>
   </app-body>
