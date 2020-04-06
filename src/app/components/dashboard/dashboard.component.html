@@ -3,41 +3,61 @@
   [subtitle]="'A hub for my various applications and projects.'"
 ></app-header>
 <app-body>
-  <div class="row">
-    <div class="col-md-12">
-      <h2 class="text-center mt-3">Featured Apps</h2>
-    </div>
-    <ng-container *ngFor="let app of featuredApps">
-      <div class="col-md-6 my-3">
-        <app-card [title]="app.name" [icon]="app.icon">
-          <p>
-            {{ app.description }}
-          </p>
-          <a class="btn btn-secondary" [href]="app.link" target="_blank">
-            Go
-          </a>
-        </app-card>
+  <ng-container *ngIf="ready; else loading">
+    <div class="row">
+      <div class="col-md-12">
+        <h2 class="text-center mt-3">Featured Apps</h2>
       </div>
-    </ng-container>
-  </div>
-  <div class="row" *ngIf="showArchive">
-    <div class="col-md-12">
-      <hr />
-      <h2 class="text-center mt-3">Archived Apps</h2>
+      <ng-container *ngFor="let app of featuredApps">
+        <div class="col-md-6 my-3">
+          <app-card [title]="app.name" [icon]="app.icon">
+            <p>
+              {{ app.description }}
+            </p>
+            <a class="btn btn-secondary" [href]="app.link" target="_blank">
+              Go
+            </a>
+          </app-card>
+        </div>
+      </ng-container>
     </div>
-    <ng-container *ngFor="let app of archivedApps">
-      <div class="col-md-6 my-3">
-        <app-card [title]="app.name" [icon]="app.icon">
-          <p>
-            {{ app.description }}
-          </p>
-          <a class="btn btn-secondary" [href]="app.link" target="_blank">
-            Go
-          </a>
-        </app-card>
+    <div class="row">
+      <div class="col-md-12">
+        <hr />
+        <h2 class="text-center mt-3">Other Apps</h2>
       </div>
-    </ng-container>
-  </div>
+      <ng-container *ngFor="let app of readyApps">
+        <div class="col-md-6 my-3">
+          <app-card [title]="app.name" [icon]="app.icon">
+            <p>
+              {{ app.description }}
+            </p>
+            <a class="btn btn-secondary" [href]="app.link" target="_blank">
+              Go
+            </a>
+          </app-card>
+        </div>
+      </ng-container>
+    </div>
+    <div class="row" *ngIf="showArchive">
+      <div class="col-md-12">
+        <hr />
+        <h2 class="text-center mt-3">Archived Apps</h2>
+      </div>
+      <ng-container *ngFor="let app of archivedApps">
+        <div class="col-md-6 my-3">
+          <app-card [title]="app.name" [icon]="app.icon">
+            <p>
+              {{ app.description }}
+            </p>
+            <a class="btn btn-secondary" [href]="app.link" target="_blank">
+              Go
+            </a>
+          </app-card>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
   <div class="row">
     <div class="col-md-12">
       <hr />
@@ -63,3 +83,11 @@
     </div>
   </div>
 </app-body>
+
+<ng-template #loading>
+  <div class="row">
+    <div class="col-md-12">
+      <app-loading></app-loading>
+    </div>
+  </div>
+</ng-template>
