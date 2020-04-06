@@ -14,4 +14,8 @@ export class AdminComponent {
     private navHelper: NavHelperService,
   ) { }
 
+  public goToAppManagement() {
+    return this.navHelper.goToApplicationOverview();
+  }
+
 }
