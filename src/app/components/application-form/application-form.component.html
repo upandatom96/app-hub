@@ -14,24 +14,24 @@
                 [(ngModel)]="application.name"
               /><br /><br />
             </section>
-            <section id="app-description">
-              2. App description:
-              <br />
-              <textarea
-                rows="20"
-                cols="50"
-                (change)="updateDescription($event)"
-                >{{ application.description }}</textarea
-              ><br /><br />
-            </section>
             <section id="app-link">
-              3. App link:
+              2. App link:
               <br />
               <input
                 type="text"
                 name="appLink"
                 [(ngModel)]="application.link"
               /><br /><br />
+            </section>
+            <section id="app-description">
+              3. App description:
+              <br />
+              <textarea
+                rows="10"
+                cols="50"
+                (change)="updateDescription($event)"
+                >{{ application.description }}</textarea
+              ><br /><br />
             </section>
             <section id="app-icon">
               4. App icon:

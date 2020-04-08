@@ -26,6 +26,18 @@ export class ApplicationFormComponent implements OnInit {
     if (this.nameInvalid) {
       myErrors.push("Please provide a name.");
     }
+    if (this.descriptionInvalid) {
+      myErrors.push("Please provide a description.");
+    }
+    if (this.linkInvalid) {
+      myErrors.push("Please provide a link.");
+    }
+    if (this.iconInvalid) {
+      myErrors.push("Please provide an icon.");
+    }
+    if (this.statusInvalid) {
+      myErrors.push("Please provide a valid status (0, 1, or 2).");
+    }
     return myErrors;
   }
 
@@ -43,6 +55,22 @@ export class ApplicationFormComponent implements OnInit {
 
   private get nameInvalid(): boolean {
     return !BooleanHelper.hasValue(this.application.name);
+  }
+
+  private get descriptionInvalid(): boolean {
+    return !BooleanHelper.hasValue(this.application.description);
+  }
+
+  private get linkInvalid(): boolean {
+    return !BooleanHelper.hasValue(this.application.link);
+  }
+
+  private get iconInvalid(): boolean {
+    return !BooleanHelper.hasValue(this.application.icon);
+  }
+
+  private get statusInvalid(): boolean {
+    return ![0, 1, 2].includes(this.application.status);
   }
 
   constructor(
