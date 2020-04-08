@@ -13,6 +13,7 @@
                 name="appName"
                 [(ngModel)]="application.name"
               /><br /><br />
+              <hr />
             </section>
             <section id="app-link">
               2. App link:
@@ -22,6 +23,7 @@
                 name="appLink"
                 [(ngModel)]="application.link"
               /><br /><br />
+              <hr />
             </section>
             <section id="app-description">
               3. App description:
@@ -32,6 +34,7 @@
                 (change)="updateDescription($event)"
                 >{{ application.description }}</textarea
               ><br /><br />
+              <hr />
             </section>
             <section id="app-icon">
               4. App icon:
@@ -41,9 +44,11 @@
                 name="appIcon"
                 [(ngModel)]="application.icon"
               /><br /><br />
+              <hr />
             </section>
             <section id="app-status">
               5. App status:
+              <br />
               <br />
               <p>0 is archived</p>
               <p>1 is available</p>
@@ -53,9 +58,12 @@
                 name="appStatus"
                 [(ngModel)]="application.status"
               /><br /><br />
+              <hr />
             </section>
-            <hr />
-            <div class="error-report" *ngIf="showErrors && !valid">
+            <div
+              class="error-report alert alert-danger"
+              *ngIf="showErrors && !valid"
+            >
               <p>Please correct the following errors:</p>
               <ul>
                 <li *ngFor="let error of errors">
