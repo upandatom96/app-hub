@@ -6,6 +6,7 @@ import { HeaderComponent } from "../header/header.component";
 import { BodyComponent } from "../body/body.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { RouterTestingModule } from "@angular/router/testing";
+import { CardComponent } from "../card/card.component";
 
 describe("ApplicationTableComponent", () => {
   let component: ApplicationTableComponent;
@@ -15,7 +16,7 @@ describe("ApplicationTableComponent", () => {
     TestBed.configureTestingModule({
       declarations: [
         ApplicationTableComponent, LoadingComponent,
-        HeaderComponent, BodyComponent
+        HeaderComponent, BodyComponent, CardComponent
       ],
       imports: [HttpClientTestingModule, RouterTestingModule]
     })

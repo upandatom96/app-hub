@@ -1,7 +1,11 @@
 <div class="row">
   <div class="col-md-12 my-3">
-    <ng-container *ngIf="ready; else notReady">
-      <button class="btn btn-secondary" (click)="createApplication()" *ngIf="canEdit">
+    <app-card [autoHeight]="false" *ngIf="ready; else notReady">
+      <button
+        class="btn btn-secondary"
+        (click)="createApplication()"
+        *ngIf="canEdit"
+      >
         Create Application
       </button>
       <ng-container *ngIf="!hasApp">
@@ -11,7 +15,7 @@
         <p>
           <small>Showing {{ applications.length }} application(s)</small>
         </p>
-        <table>
+        <table class="table table-striped">
           <thead>
             <tr>
               <th>Name</th>
@@ -49,7 +53,7 @@
           </tbody>
         </table>
       </ng-container>
-    </ng-container>
+    </app-card>
   </div>
 </div>
 
