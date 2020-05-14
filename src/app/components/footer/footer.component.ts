@@ -20,16 +20,7 @@ export class FooterComponent {
     private navHelper: NavHelperService,
   ) { }
 
-  public goToInfo() {
-    this.navHelper.goToInfo();
-  }
-
   public goToLogin() {
     this.navHelper.goToLogin();
-  }
-
-  public goToAdamOnTheInternet() {
-    const url = "http://adamontheinternet.com";
-    window.open(url);
   }
 }
