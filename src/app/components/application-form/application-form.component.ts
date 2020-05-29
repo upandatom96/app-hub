@@ -1,9 +1,9 @@
-import { Component, OnInit } from "@angular/core";
-import { Application } from "src/app/models/Application.model";
-import { BooleanHelper } from "src/app/utilities/boolean.util";
-import { ActivatedRoute } from "@angular/router";
-import { ApplicationService } from "src/app/services/application.service";
-import { NavHelperService } from "src/app/services/nav-helper.service";
+import {Component, OnInit} from "@angular/core";
+import {Application} from "src/app/models/Application.model";
+import {BooleanHelper} from "src/app/utilities/boolean.util";
+import {ActivatedRoute} from "@angular/router";
+import {ApplicationService} from "src/app/services/application.service";
+import {NavHelperService} from "src/app/services/nav-helper.service";
 
 @Component({
   selector: "app-application-form",
@@ -25,6 +25,9 @@ export class ApplicationFormComponent implements OnInit {
     const myErrors = [];
     if (this.nameInvalid) {
       myErrors.push("Please provide a name.");
+    }
+    if (this.taglineInvalid) {
+      myErrors.push("Please provide a tagline.");
     }
     if (this.descriptionInvalid) {
       myErrors.push("Please provide a description.");
@@ -57,6 +60,10 @@ export class ApplicationFormComponent implements OnInit {
     return !BooleanHelper.hasValue(this.application.name);
   }
 
+  private get taglineInvalid(): boolean {
+    return !BooleanHelper.hasValue(this.application.tagline);
+  }
+
   private get descriptionInvalid(): boolean {
     return !BooleanHelper.hasValue(this.application.description);
   }
@@ -77,7 +84,8 @@ export class ApplicationFormComponent implements OnInit {
     private route: ActivatedRoute,
     private applicationService: ApplicationService,
     private navHelper: NavHelperService,
-  ) { }
+  ) {
+  }
 
   public ngOnInit() {
     this.setupForm();
@@ -92,6 +100,10 @@ export class ApplicationFormComponent implements OnInit {
     if (this.valid) {
       this.save();
     }
+  }
+
+  public setStatus(status: number) {
+    this.application.status = status;
   }
 
   private save() {

@@ -1,65 +1,104 @@
 <ng-container *ngIf="ready; else notReady">
-  <app-header [title]="title"></app-header>
   <app-body>
     <div class="row">
-      <div class="col-md-12 my-3">
-        <app-card>
+      <div class="col-md-10 mx-auto my-3">
+        <app-card [title]="title">
+          <hr>
           <form>
-            <section id="app-name">
-              1. App name:
-              <br />
+            <section class="mb-3">
+              <label for="app-name">
+                1. Name:
+              </label>
               <input
                 type="text"
+                class="form-control"
                 name="appName"
+                id="app-name"
                 [(ngModel)]="application.name"
-              /><br /><br />
-              <hr />
+              />
             </section>
-            <section id="app-link">
-              2. App link:
-              <br />
+            <section class="mb-3">
+              <label for="app-link">
+                2. App link:
+              </label>
               <input
                 type="text"
+                class="form-control"
                 name="appLink"
+                id="app-link"
                 [(ngModel)]="application.link"
-              /><br /><br />
-              <hr />
+              />
             </section>
-            <section id="app-description">
-              3. App description:
-              <br />
+            <section class="mb-3">
+              <label for="app-github-link">
+                3. GitHub link:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                name="appGitHubLink"
+                id="app-github-link"
+                [(ngModel)]="application.githubLink"
+              />
+            </section>
+            <section class="mb-3">
+              <label for="app-tagline">
+                4. Tagline:
+              </label>
+              <br/>
+              <input
+                type="text"
+                class="form-control"
+                name="appTagline"
+                id="app-tagline"
+                [(ngModel)]="application.tagline"
+              />
+            </section>
+            <section class="mb-3">
+              <label for="app-icon">
+                5. Icon:
+              </label>
+              <input
+                type="text"
+                class="form-control"
+                name="appIcon"
+                id="app-icon"
+                [(ngModel)]="application.icon"
+              />
+            </section>
+            <section class="mb-3">
+              <label for="app-description">
+                6. App description:
+              </label>
               <textarea
-                rows="10"
+                id="app-description"
+                class="form-control"
+                rows="5"
                 cols="50"
                 (change)="updateDescription($event)"
-                >{{ application.description }}</textarea
-              ><br /><br />
-              <hr />
+              >{{ application.description }}</textarea
+              >
             </section>
-            <section id="app-icon">
-              4. App icon:
-              <br />
-              <input
-                type="text"
-                name="appIcon"
-                [(ngModel)]="application.icon"
-              /><br /><br />
-              <hr />
+            <section class="mb-3">
+              <label for="app-status">
+                7. App status:
+              </label>
+              <div id="app-status" class="my-3">
+                <button class="btn btn-secondary mx-3" (click)="setStatus(0)">
+                  <i class="fa fa-check" *ngIf="application.status === 0"></i>
+                  Archived
+                </button>
+                <button class="btn btn-secondary mx-3" (click)="setStatus(1)">
+                  <i class="fa fa-check" *ngIf="application.status === 1"></i>
+                  Available
+                </button>
+                <button class="btn btn-secondary mx-3" (click)="setStatus(2)">
+                  <i class="fa fa-check" *ngIf="application.status === 2"></i>
+                  Featured
+                </button>
+              </div>
             </section>
-            <section id="app-status">
-              5. App status:
-              <br />
-              <br />
-              <p>0 is archived</p>
-              <p>1 is available</p>
-              <p>2 is featured</p>
-              <input
-                type="number"
-                name="appStatus"
-                [(ngModel)]="application.status"
-              /><br /><br />
-              <hr />
-            </section>
+            <hr>
             <div
               class="error-report alert alert-danger"
               *ngIf="showErrors && !valid"
@@ -71,7 +110,7 @@
                 </li>
               </ul>
             </div>
-            <button class="btn btn-primary" (click)="submit()">
+            <button class="btn btn-success btn-block" (click)="submit()">
               Save Application
             </button>
           </form>
