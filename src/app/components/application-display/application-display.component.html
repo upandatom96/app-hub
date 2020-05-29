@@ -20,11 +20,14 @@
               {{ application.description }}
             </p>
             <div class="row">
+              <div class="col-md-12">
+                <hr>
+              </div>
               <div class="col-md-6 mx-auto">
                 <p *ngIf="application.link">
                   <a class="btn btn-primary btn-block" [href]="application.link" target="_blank">
                     Visit Application
-                    <i class="fa fa-arrow-right"></i>
+                    <i class="fa fa-external-link"></i>
                   </a>
                 </p>
                 <p *ngIf="application.githubLink">

@@ -16,15 +16,15 @@
         {{app.name}}
       </td>
       <td>
-        <a class="btn btn-primary" [href]="app.link" target="_blank">
+        <a class="btn btn-primary" [href]="app.link" target="_blank" *ngIf="app.link">
           Visit Application
-          <i class="fa fa-arrow-right"></i>
+          <i class="fa fa-external-link"></i>
         </a>
       </td>
       <td>
         <button class="btn btn-outline-primary" (click)="goDetails(app)">
           Details
-          <i class="fa fa-comments"></i>
+          <i class="fa fa-info-circle"></i>
         </button>
       </td>
     </tr>

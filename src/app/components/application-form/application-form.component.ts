@@ -32,9 +32,6 @@ export class ApplicationFormComponent implements OnInit {
     if (this.descriptionInvalid) {
       myErrors.push("Please provide a description.");
     }
-    if (this.linkInvalid) {
-      myErrors.push("Please provide a link.");
-    }
     if (this.iconInvalid) {
       myErrors.push("Please provide an icon.");
     }
@@ -66,10 +63,6 @@ export class ApplicationFormComponent implements OnInit {
 
   private get descriptionInvalid(): boolean {
     return !BooleanHelper.hasValue(this.application.description);
-  }
-
-  private get linkInvalid(): boolean {
-    return !BooleanHelper.hasValue(this.application.link);
   }
 
   private get iconInvalid(): boolean {

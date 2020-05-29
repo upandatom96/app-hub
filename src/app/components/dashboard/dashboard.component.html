@@ -1,23 +1,18 @@
 <app-body>
   <ng-container *ngIf="ready; else loading">
     <div class="row">
-      <div class="col-md-12">
-        <h2 class="text-center mt-3">Featured Apps</h2>
-      </div>
       <div class="col-md-12 my-2">
         <app-app-listing-featured [apps]="featuredApps"></app-app-listing-featured>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12">
-        <h2 class="text-center mt-3">Other Apps</h2>
-      </div>
       <div class="col-md-12 my-2">
         <app-app-listing-standard [apps]="readyApps"></app-app-listing-standard>
       </div>
     </div>
     <div class="row" *ngIf="showArchive">
       <div class="col-md-12">
+        <hr>
         <h2 class="text-center mt-3">Archived Apps</h2>
       </div>
       <div class="col-md-12 my-2">
