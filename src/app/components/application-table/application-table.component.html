@@ -1,13 +1,19 @@
 <div class="row">
   <div class="col-md-12 my-3">
     <app-card [autoHeight]="false" *ngIf="ready; else notReady">
-      <button
-        class="btn btn-secondary"
-        (click)="createApplication()"
-        *ngIf="canEdit"
-      >
-        Create Application
-      </button>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <h1>Application Overview</h1>
+          <button
+            class="btn btn-outline-success"
+            (click)="createApplication()"
+            *ngIf="canEdit"
+          >
+            <i class="fa fa-plus"></i>
+            Create Application
+          </button>
+        </div>
+      </div>
       <ng-container *ngIf="!hasApp">
         <p>No applications available.</p>
       </ng-container>
@@ -17,39 +23,39 @@
         </p>
         <table class="table table-striped">
           <thead>
-            <tr>
-              <th>Name</th>
-              <th>Details</th>
-              <ng-container *ngIf="canEdit">
-                <th>Edit</th>
-                <th>Delete</th>
-              </ng-container>
-            </tr>
+          <tr>
+            <th>Name</th>
+            <th>Details</th>
+            <ng-container *ngIf="canEdit">
+              <th>Edit</th>
+              <th>Delete</th>
+            </ng-container>
+          </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let app of applications">
-              <td>{{ app.name }}</td>
+          <tr *ngFor="let app of applications">
+            <td>{{ app.name }}</td>
+            <td>
+              <button class="btn btn-secondary" (click)="appDetails(app)">
+                Details
+              </button>
+            </td>
+            <ng-container *ngIf="canEdit">
               <td>
-                <button class="btn btn-secondary" (click)="appDetails(app)">
-                  Details
+                <button class="btn btn-warning" (click)="editApp(app)">
+                  Edit
                 </button>
               </td>
-              <ng-container *ngIf="canEdit">
-                <td>
-                  <button class="btn btn-secondary" (click)="editApp(app)">
-                    Edit
-                  </button>
-                </td>
-                <td>
-                  <button
-                    class="btn btn-secondary"
-                    (click)="requestDelete(app)"
-                  >
-                    Delete
-                  </button>
-                </td>
-              </ng-container>
-            </tr>
+              <td>
+                <button
+                  class="btn btn-danger"
+                  (click)="requestDelete(app)"
+                >
+                  Delete
+                </button>
+              </td>
+            </ng-container>
+          </tr>
           </tbody>
         </table>
       </ng-container>
