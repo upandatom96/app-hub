@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-brown">
-  <a class="navbar-brand" (click)="goToDashboard()" id="app-title">
+  <a class="navbar-brand" (click)="goToDashboard()">
     <i class="fa fa-sitemap"></i>
     <span id="app-title">
-      App Hub
+      Adam on the Internet - App Hub
     </span>
   </a>
   <button
@@ -18,6 +18,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" (click)="goToDonate()">Donate</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" (click)="goToInfo()">Information</a>
+      </li>
       <ng-container *ngIf="isLoggedIn">
         <li class="nav-item">
           <a class="nav-link" (click)="goToProfile()">Your profile</a>

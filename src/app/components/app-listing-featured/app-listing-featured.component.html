@@ -1,0 +1,17 @@
+<div class="row">
+  <ng-container *ngFor="let app of apps">
+    <div class="col-md-4 my-3">
+      <app-card [title]="app.name" [icon]="app.icon">
+        <p>
+          {{ app.description }}
+        </p>
+        <a class="btn btn-primary mx-2" [href]="app.link" target="_blank">
+          Visit
+        </a>
+        <button class="btn btn-outline-primary mx-2" (click)="goDetails(app)">
+          Details
+        </button>
+      </app-card>
+    </div>
+  </ng-container>
+</div>

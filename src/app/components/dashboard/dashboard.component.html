@@ -1,87 +1,30 @@
-<app-header
-  [title]="'App Hub'"
-  [subtitle]="'A hub for my various applications and projects.'"
-></app-header>
 <app-body>
   <ng-container *ngIf="ready; else loading">
     <div class="row">
       <div class="col-md-12">
         <h2 class="text-center mt-3">Featured Apps</h2>
       </div>
-      <ng-container *ngFor="let app of featuredApps">
-        <div class="col-md-6 my-3">
-          <app-card [title]="app.name" [icon]="app.icon">
-            <p>
-              {{ app.description }}
-            </p>
-            <a class="btn btn-secondary" [href]="app.link" target="_blank">
-              Go
-            </a>
-          </app-card>
-        </div>
-      </ng-container>
+      <div class="col-md-12 my-2">
+        <app-app-listing-featured [apps]="featuredApps"></app-app-listing-featured>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-12">
-        <hr />
         <h2 class="text-center mt-3">Other Apps</h2>
       </div>
-      <ng-container *ngFor="let app of readyApps">
-        <div class="col-md-6 my-3">
-          <app-card [title]="app.name" [icon]="app.icon">
-            <p>
-              {{ app.description }}
-            </p>
-            <a class="btn btn-secondary" [href]="app.link" target="_blank">
-              Go
-            </a>
-          </app-card>
-        </div>
-      </ng-container>
+      <div class="col-md-12 my-2">
+        <app-app-listing-standard [apps]="readyApps"></app-app-listing-standard>
+      </div>
     </div>
     <div class="row" *ngIf="showArchive">
       <div class="col-md-12">
-        <hr />
         <h2 class="text-center mt-3">Archived Apps</h2>
       </div>
-      <ng-container *ngFor="let app of archivedApps">
-        <div class="col-md-6 my-3">
-          <app-card [title]="app.name" [icon]="app.icon">
-            <p>
-              {{ app.description }}
-            </p>
-            <a class="btn btn-secondary" [href]="app.link" target="_blank">
-              Go
-            </a>
-          </app-card>
-        </div>
-      </ng-container>
+      <div class="col-md-12 my-2">
+        <app-app-listing-standard [apps]="archivedApps"></app-app-listing-standard>
+      </div>
     </div>
   </ng-container>
-  <div class="row">
-    <div class="col-md-12">
-      <hr />
-      <h2 class="text-center mt-3">More</h2>
-    </div>
-    <div class="col-md-6 my-3">
-      <app-card [title]="'Donate to Charity'" [icon]="'fa-money'">
-        <p>
-          Like any of these websites? Pay it forward to a charity I support.
-        </p>
-        <button class="btn btn-secondary" (click)="goToDonate()">
-          Donate
-        </button>
-      </app-card>
-    </div>
-    <div class="col-md-6 my-3">
-      <app-card [title]="'App Information'" [icon]="'fa-info-circle'">
-        <p>
-          Just curious about this site? Get more information about this website.
-        </p>
-        <button class="btn btn-secondary" (click)="goToInfo()">Info</button>
-      </app-card>
-    </div>
-  </div>
 </app-body>
 
 <ng-template #loading>

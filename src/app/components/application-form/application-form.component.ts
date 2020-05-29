@@ -144,6 +144,9 @@ export class ApplicationFormComponent implements OnInit {
   private setupCreateForm(): void {
     this.application = {
       name: null,
+      githubLink: null,
+      tagline: null,
+      tech: [],
       description: null,
       link: null,
       icon: null,

@@ -17,17 +17,17 @@ export class NavbarComponent {
     return CookieHelper.getUserDetails().admin;
   }
 
-  public get userEmail(): string {
-    if (this.isLoggedIn) {
-      return CookieHelper.getUserDetails().email;
-    } else {
-      return null;
-    }
-  }
-
   constructor(
     private navHelper: NavHelperService,
   ) { }
+
+  public goToInfo() {
+    this.navHelper.goToInfo();
+  }
+
+  public goToDonate() {
+    this.navHelper.goToDonate();
+  }
 
   public goToDashboard(): void {
     this.navHelper.goToDashboard();
