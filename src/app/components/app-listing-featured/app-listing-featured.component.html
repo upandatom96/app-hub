@@ -12,14 +12,18 @@
           <p>
             {{ app.tagline }}
           </p>
-          <a class="btn btn-primary mx-2" [href]="app.link" target="_blank" *ngIf="app.link">
-            Visit Application
-            <i class="fa fa-external-link"></i>
-          </a>
-          <button class="btn btn-outline-primary mx-2" (click)="goDetails(app)">
-            Details
-            <i class="fa fa-info-circle"></i>
-          </button>
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <a class="btn btn-primary btn-block mx-2" [href]="app.link" target="_blank" *ngIf="app.link">
+                Visit Application
+                <i class="fa fa-external-link"></i>
+              </a>
+              <button class="btn btn-info btn-block mx-2" (click)="goDetails(app)">
+                Details
+                <i class="fa fa-info-circle"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </app-card>
     </div>
