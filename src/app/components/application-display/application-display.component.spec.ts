@@ -1,11 +1,12 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { ApplicationDisplayComponent } from "./application-display.component";
-import { BodyComponent } from "../body/body.component";
-import { HeaderComponent } from "../header/header.component";
-import { LoadingComponent } from "../loading/loading.component";
-import { HttpClientTestingModule } from "@angular/common/http/testing";
-import { RouterTestingModule } from "@angular/router/testing";
+import {ApplicationDisplayComponent} from "./application-display.component";
+import {BodyComponent} from "../body/body.component";
+import {HeaderComponent} from "../header/header.component";
+import {LoadingComponent} from "../loading/loading.component";
+import {HttpClientTestingModule} from "@angular/common/http/testing";
+import {RouterTestingModule} from "@angular/router/testing";
+import {CardComponent} from "../card/card.component";
 
 describe("ApplicationDisplayComponent", () => {
   let component: ApplicationDisplayComponent;
@@ -15,7 +16,7 @@ describe("ApplicationDisplayComponent", () => {
     TestBed.configureTestingModule({
       declarations: [
         ApplicationDisplayComponent, BodyComponent, HeaderComponent,
-        LoadingComponent
+        LoadingComponent, CardComponent,
       ],
       imports: [HttpClientTestingModule, RouterTestingModule]
     })

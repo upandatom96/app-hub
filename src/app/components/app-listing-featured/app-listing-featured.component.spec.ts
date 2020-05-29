@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from "@angular/core/testing";
 
-import { AppListingFeaturedComponent } from './app-listing-featured.component';
+import {AppListingFeaturedComponent} from "./app-listing-featured.component";
+import {CardComponent} from "../card/card.component";
+import {RouterTestingModule} from "@angular/router/testing";
 
-describe('AppListingFeaturedComponent', () => {
+describe("AppListingFeaturedComponent", () => {
   let component: AppListingFeaturedComponent;
   let fixture: ComponentFixture<AppListingFeaturedComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppListingFeaturedComponent ]
+      declarations: [AppListingFeaturedComponent, CardComponent, ],
+      imports: [RouterTestingModule, ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,7 @@ describe('AppListingFeaturedComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });

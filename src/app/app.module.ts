@@ -22,8 +22,8 @@ import { ApplicationDisplayComponent } from "./components/application-display/ap
 import { ApplicationFormComponent } from "./components/application-form/application-form.component";
 import { ApplicationOverviewComponent } from "./components/application-overview/application-overview.component";
 import { ApplicationTableComponent } from "./components/application-table/application-table.component";
-import { AppListingFeaturedComponent } from './components/app-listing-featured/app-listing-featured.component';
-import { AppListingStandardComponent } from './components/app-listing-standard/app-listing-standard.component';
+import { AppListingFeaturedComponent } from "./components/app-listing-featured/app-listing-featured.component";
+import { AppListingStandardComponent } from "./components/app-listing-standard/app-listing-standard.component";
 
 @NgModule({
   declarations: [

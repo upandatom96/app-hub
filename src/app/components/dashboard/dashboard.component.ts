@@ -1,9 +1,8 @@
-import { Component, OnInit } from "@angular/core";
-import { NavHelperService } from "src/app/services/nav-helper.service";
-import { Application } from "src/app/models/Application.model";
-import { ApplicationService } from "src/app/services/application.service";
-import { CookieHelper } from "src/app/utilities/cookie.util";
-import { BooleanHelper } from "src/app/utilities/boolean.util";
+import {Component, OnInit} from "@angular/core";
+import {Application} from "src/app/models/Application.model";
+import {ApplicationService} from "src/app/services/application.service";
+import {CookieHelper} from "src/app/utilities/cookie.util";
+import {BooleanHelper} from "src/app/utilities/boolean.util";
 
 @Component({
   selector: "app-dashboard",
@@ -40,20 +39,12 @@ export class DashboardComponent implements OnInit {
   }
 
   constructor(
-    private navHelper: NavHelperService,
     private appService: ApplicationService,
-  ) { }
+  ) {
+  }
 
   public ngOnInit() {
     this.loadApps();
-  }
-
-  public goToInfo() {
-    this.navHelper.goToInfo();
-  }
-
-  public goToDonate() {
-    this.navHelper.goToDonate();
   }
 
   private loadApps(): void {
