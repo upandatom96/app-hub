@@ -1,29 +1,42 @@
 <ng-container *ngIf="ready; else notReady">
   <app-body>
     <div class="row">
-      <div class="col-md-12 my-3">
-        <h1>
-          {{ application.name }}
-        </h1>
-        <p>
-          <strong>Description:</strong>
-          {{ application.description }}
-        </p>
-        <p>
-          <strong>Link:</strong>
-          {{ application.link }}
-        </p>
-        <p>
-          <strong>Icon:</strong>
-          {{ application.icon }}
-        </p>
-        <p>
-          <strong>Status:</strong>
-          {{ application.status }}
-        </p>
-        <p>
-          <small>{{ application._id }}</small>
-        </p>
+      <div class="col-md-8 mx-auto my-3">
+        <app-card>
+          <div class="text-center">
+            <h1>
+              <span *ngIf="application.icon">
+                <i class="fa" [ngClass]="application.icon"></i>
+              </span>
+              {{ application.name }}
+            </h1>
+            <h2 *ngIf="application.tagline">
+              <em>
+                {{application.tagline}}
+              </em>
+            </h2>
+            <hr>
+            <p class="lead">
+              {{ application.description }}
+            </p>
+            <div class="row">
+              <div class="col-md-6 mx-auto">
+                <p *ngIf="application.link">
+                  <a class="btn btn-primary btn-block" [href]="application.link" target="_blank">
+                    Visit Application
+                    <i class="fa fa-arrow-right"></i>
+                  </a>
+                </p>
+                <p *ngIf="application.githubLink">
+                  <a class="btn btn-info btn-block" [href]="application.githubLink" target="_blank">
+                    Visit GitHub Page
+                    <i class="fa fa-github"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </app-card>
       </div>
     </div>
   </app-body>
