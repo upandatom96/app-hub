@@ -1,10 +1,10 @@
 <app-body>
   <div class="row">
     <div class="col-md-12 my-4">
-      <a class="twitter-timeline" data-lang="en" data-theme="dark"
-         href="https://twitter.com/adam_on_the_net/lists/adam-on-the-internet-25746?ref_src=twsrc%5Etfw">
-        A Twitter List by adam_on_the_net
-      </a>
+      <app-twitter-list-display
+        [author]="author"
+        [listUrl]="listUrl">
+      </app-twitter-list-display>
     </div>
   </div>
 </app-body>

@@ -25,6 +25,7 @@ import { ApplicationTableComponent } from "./components/application-table/applic
 import { AppListingFeaturedComponent } from "./components/app-listing-featured/app-listing-featured.component";
 import { AppListingStandardComponent } from "./components/app-listing-standard/app-listing-standard.component";
 import { TwitterFeedComponent } from "./components/twitter-feed/twitter-feed.component";
+import { TwitterListDisplayComponent } from "./components/twitter-list-display/twitter-list-display.component";
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { TwitterFeedComponent } from "./components/twitter-feed/twitter-feed.com
     AppListingFeaturedComponent,
     AppListingStandardComponent,
     TwitterFeedComponent,
+    TwitterListDisplayComponent,
   ],
   imports: [
     BrowserModule,
