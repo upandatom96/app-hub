@@ -8,4 +8,5 @@ export const enum ROUTES_ENUM {
   ApplicationOverview = "app-overview",
   ApplicationDetails = "app-details",
   ApplicationForm = "app-form",
+  TwitterFeed = "twitter-feed",
 }

@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import {Component} from "@angular/core";
 import {Donation} from "../../models/Donation.model";
 
 @Component({
@@ -36,6 +36,7 @@ export class DonateComponent {
     {
       name: "Meals on Wheels",
       details: "Donate to help feed America.",
+// tslint:disable-next-line
       link: "https://ams.mealsonwheelsamerica.org/eweb/DynamicPage.aspx?WebCode=globaldonate&site=mowa&CampCode=AnnualCampaign&AplCode=AnnCampWeb&_ga=2.86054296.1679140158.1542118140-1937589897.1533304096",
     },
   ];

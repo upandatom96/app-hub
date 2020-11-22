@@ -33,6 +33,10 @@ export class NavbarComponent {
     this.navHelper.goToDashboard();
   }
 
+  public goToTwitter(): void {
+    this.navHelper.goToTwitter();
+  }
+
   public goToProfile(): void {
     this.navHelper.goToProfile();
   }

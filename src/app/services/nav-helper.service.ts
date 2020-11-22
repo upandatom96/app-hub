@@ -15,6 +15,10 @@ export class NavHelperService {
     this.goToRoute(ROUTES_ENUM.Dashboard);
   }
 
+  public goToTwitter(): void {
+    this.goToRoute(ROUTES_ENUM.TwitterFeed);
+  }
+
   public goToInfo(): void {
     this.goToRoute(ROUTES_ENUM.Info);
   }
